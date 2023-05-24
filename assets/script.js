@@ -1,54 +1,51 @@
 // Assignment code here
-sa
+
+
+
+
 
 // Get references to the #generate element
-let generateBtn = document.querySelector("#generate");
-
+const generateBtn = document.querySelector("#generate");
 
 
 //Arrays/password criteria
 
-let specialChar = "!@#$%^&*()";
+const specialChar = "!@#$%^&*()";
 const upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const lowerCase ="abcdefghijklmnopqrstuvwxyz";
 const numeric = "0123456789";
-
-
-
-
+let charPool = 
 
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+  //step 6 - generate password
+  let password = generatePassword();
+  //step 7 - display password
+  const passwordText = document.querySelector("#password");
 
   passwordText.value = password;
 
 }
 
+//step 1 - when button is clicked, show user prompts for password
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
 
+function generatePassword(){
+  //user prompted for pw criteria 
+  
+//step 2 - Make criteria selectable (use something like an alert)
+//step 3 - Ask user for input on length of password; between 8 - 128
+//step 4 - Confirm character types; Uppercase, Lowercase, Number, Special
+//step 5 - check character types, make sure one type is at least selected
+console.log("button has been clicked");
+alert("I am an alert box!");
+var hasUpper = confirm("do you want uppercase?");
+console.log(hasUpper);
+var hasLower = confirm("do you want case?");
+console.log(hasUpper);
+}
 
 
-
-
-
-
-
-
-THEN I am presented with a series of prompts for password criteria
-WHEN prompted for password criteria
-THEN I select which criteria to include in the password
-WHEN prompted for the length of the password
-THEN I choose a length of at least 8 characters and no more than 128 characters
-WHEN asked for character types to include in the password
-THEN I confirm whether or not to include lowercase, uppercase, numeric, and/or special characters
-WHEN I answer each prompt
-THEN my input should be validated and at least one character type should be selected
-WHEN all prompts are answered
-THEN a password is generated that matches the selected criteria
-WHEN the password is generated
-THEN the password is either displayed in an alert or written to the page
