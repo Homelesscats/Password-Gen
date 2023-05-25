@@ -1,12 +1,6 @@
 // Assignment code here
-
-
-
-
-
 // Get references to the #generate element
 const generateBtn = document.querySelector("#generate");
-
 
 //Arrays/password criteria
 
@@ -52,7 +46,12 @@ console.log("button has been clicked");
 
 let length = prompt("Please select a character length for your new password (Between 8 - 128 Characters");
 console.log(length);
+if (length < 8 || length >128) {
+alert(
+"Invalid password length. Password length must be between 8 and 128 characters.");
 
+return 'Please press "Generate Password"';
+}
 let hasUpper = prompt("do you want uppercase?");
 console.log(hasUpper);
 
