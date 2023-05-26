@@ -75,18 +75,6 @@ let password = '';
 
 //------------------------------------------------------------------------------------------------------------------
 
-// const response = confirm('Lowercase?');
-// if (response) {
-//   //user selected ok then: 
-//   console.log("ok was pressed");
-// } else {
-// if(response) {
-// //user selected no:
-// console.log("cancel was pressed");
-
-// }
-
-// }
 
 
 //---------------------------------------------------------------------------------------------------------------------
@@ -119,6 +107,3 @@ return password;
 
 }
 
-
-Math.random()
-Math.random()
