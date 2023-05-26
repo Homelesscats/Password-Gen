@@ -27,45 +27,71 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-function randomInt(max) {
-  return 7
+function randomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
-// 12
+
+
 
 function generatePassword(){
   //user prompted for pw criteria 
-  
-//step 2 - Make criteria selectable (use something like an alert)
-//step 3 - Ask user for input on length of password; between 8 - 128
-//step 4 - Confirm character types; Uppercase, Lowercase, Number, Special
+  charPool
+
+
+
 //step 5 - check character types, make sure one type is at least selected
-
-
 
 console.log("button has been clicked");
 
 let length = prompt("Please select a character length for your new password (Between 8 - 128 Characters");
 console.log(length);
+
+
+//step 3 - Ask user for input on length of password; between 8 - 128
+
 if (length < 8 || length >128) {
-alert(
-"Invalid password length. Password length must be between 8 and 128 characters.");
+alert("Invalid password length. Password length must be between 8 and 128 characters.");
 
 return 'Please press "Generate Password"';
 }
-let hasUpper = prompt("do you want uppercase?");
+//step 2 - Make criteria selectable (use something like an alert)
+
+let hasUpper = confirm("do you want uppercase?");
 console.log(hasUpper);
 
-let hasLower = prompt("do you want lowercase?");
+let hasLower = confirm("do you want lowercase?");
 console.log(hasLower);
 
-let hasSpecialChar = prompt("Do you want special characters?:!@#$%^&*() ")
+let hasSpecialChar = confirm("Do you want special characters?:!@#$%^&*() ")
 console.log(hasSpecialChar)
 
-let hasNumeric = prompt("do you want numbers?")
+let hasNumeric = confirm("do you want numbers?")
 console.log(hasNumeric);
 // what will the password be
-let password = ''
+let password = '';
 
+
+//------------------------------------------------------------------------------------------------------------------
+
+// const response = confirm('Lowercase?');
+// if (response) {
+//   //user selected ok then: 
+//   console.log("ok was pressed");
+// } else {
+// if(response) {
+// //user selected no:
+// console.log("cancel was pressed");
+
+// }
+
+// }
+
+
+//---------------------------------------------------------------------------------------------------------------------
+
+//step 4 - Confirm character types; Uppercase, Lowercase, Number, Special
 // what options go into our list
 if (hasUpper) {
   charPool += upperCase
@@ -80,11 +106,12 @@ if (hasSpecialChar) {
 }
 
 if (hasNumeric) {
-cahPool += numeric
+charPool += numeric
 }
+console.log(randomInt(0, length));
 
 for (let i = 0; i < length; i++) {
-  password += charPool[randomInt(length)]
+  password += charPool[randomInt(0, charPool.length-1)]
 }
 
 
@@ -93,3 +120,5 @@ return password;
 }
 
 
+Math.random()
+Math.random()
